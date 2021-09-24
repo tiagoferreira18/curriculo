@@ -1,0 +1,185 @@
+/* Regra para o seletor universal (tudo)
+   Ajustar a alteração do box model para todos elementos da página */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* background-color: lightblue;
+  background-image: url(../imagens/tarde.jpg); */
+  /* trabalhando com gradiente: posso controlar o gradiente alterando o padrao que é de cima pra baixo, usando o to right para direita - posso por exemplo colocar a porcentagem na frente da cor */
+  /* background-image: linear-gradient(to right, black 10%, blue 10%); */
+
+  background: rgb(21, 115, 168);
+  background: linear-gradient(
+    70deg,
+    rgba(21, 115, 168, 1) 0%,
+    rgba(81, 138, 221, 1) 35%,
+    rgba(86, 177, 228, 1) 63%,
+    rgba(147, 237, 255, 0.8911939775910365) 100%
+  );
+
+  background-size: cover; /* Cover, a imagem se auto ajusta para não replicar*/
+  background-attachment: fixed; /* Plano de fundo fixo */
+}
+
+/* Regra usando seletor id */
+
+#container {
+  background-color: rgba(255, 255, 255, 0.548);
+  /* Margin e width usados juntos dessa maneira centraliza o conteudo do container na página */
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  /* Com a palavra inset a sombra fica pra dentro */
+  box-shadow: black 2px 2px 10px inset;
+}
+
+img {
+  /* Tornando a imagem flexivel / responsivas */
+  max-width: 100%;
+}
+
+/* Criar uma regra usando o seletor class */
+
+.canto-arredondado {
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  /* uppercase letras maiusculas */
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  border-top: solid 5px blue;
+  border-bottom: solid 5px blue;
+}
+
+h2 {
+  color: blue;
+  text-shadow: black 1px 1px 2px;
+  border-bottom: dotted 1px;
+}
+
+/* Regra com seletor de pseudo-classe negação */
+/* p:not(#teste) {
+  font-size: 18px;
+  line-height: 2;
+  color: darkblue;
+  } */
+p {
+  font-size: 18px; /* shift alt a = comentario na frente da tag */
+  line-height: 2; /* Espaçamento entre linha aceita pc numeros fracionados exemplo 1.5 ou inteiros */
+}
+
+/* REGRA COM SELETOR DESCENDENTE */
+ol li {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  list-style: lower-roman; /* lower-alpha , upper-alpha */
+}
+
+ul li {
+  list-style: none; /* Remover o estilo da lista   - none, circle, square, por padrao vem o disc*/
+  /* É possil colocar imagens no stylo da list */
+  list-style-image: url(../imagens/item-lista.gif);
+}
+
+.centralizar {
+  text-align: center;
+}
+
+.sombra {
+  box-shadow: black 1px 1px 3px;
+}
+
+/* Regras para link */
+nav {
+  text-align: center;
+}
+nav a {
+  /* Tirando o linha do link */
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  /* padding: 15px 30px; */
+  transition: 1s;
+  display: inline-block;
+  width: 33%;
+}
+/* Pseudo-classes first-chield e :last-child
+Seleciona o primeiro filho e o ultimo filho
+Colocar borda somente em um lado */
+nav a:first-child {
+  border-right: solid 2px white;
+}
+
+nav a:last-child {
+  border-left: solid 2px white;
+}
+
+/* Regras para acionamento do link usando psudo-classes :hover -> funciona ao passar o mouse */
+/* focus-> ao navegar pelo teclado (tab, shift tab) */
+/* OBS: selector agrupado(Veja a vírgula) */
+nav a:hover,
+nav a:focus {
+  background-color: turquoise;
+  color: black;
+}
+
+/* nav a:focus {
+  background-color: turquoise;
+  color: black;
+} */
+
+/* Exemplo de como deixar o link sempre da mesma cor apos e antes do link */
+p a,
+p a:visited,
+li a,
+li a:visited {
+  color: blue;
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+  box-shadow: black 0 0 5px;
+  width: 400px;
+  margin: auto;
+  /* Definindo um contexto para posicionamento */
+  position: relative;
+}
+/* Resolve o problema do espacinho no final da imagem */
+figure img {
+  vertical-align: middle;
+}
+figcaption {
+  background-color: rgba(0, 0, 0, 0.479);
+  color: white;
+  position: absolute;
+
+  /* Cordenadas */
+  bottom: 5px;
+  left: 0;
+  right: 0;
+}
+
+.alinhar-esquerda {
+  float: left;
+}
+.alinhar-direita {
+  float: right;
+}
+
+/* Regra com PSEUDO-ELEMENTO
+Casa com algum elemento e permite a geração de conteúdo sem mexer no HTML */
+h3::before {
+  content: '📝';
+}
+
+h3::after {
+  content: '💻';
+}

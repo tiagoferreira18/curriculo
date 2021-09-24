@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;600;800&display=swap');
+
+
+body {
+  font-family: 'Gothic A1', sans-serif;
+  background-color: rgb(230, 233, 240);
+  
+}
+
+.container{
+  position: relative;
+  width: 90%;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+}
+
+/* Linhas */
+
+hr{
+  color: white; 
+  box-shadow: rgb(147, 147, 241) 0px 2px 3px;
+  border: 1px solid;
+  
+  
+}
+
+/* Icones dos h2 */
+.formacao::before{
+  content: '🎓';
+}
+
+.experiencia::before{
+  content: '📁';
+}
+
+.objetivo::before{
+  content: '💻';
+  
+}
+
+
+.perfil::before{
+  content: '👔';
+}
+
+/* Todos os H2 */
+h2{
+  text-shadow: blue 0px 0px 2px;
+  
+}
+
+/* Sombras no texto */
+.sombra{
+  text-shadow: blue 0px 1px 4px;
+}
+
+/* Nome */
+
+.name {
+  text-align: center;
+}
+
+/* Links do contato */
+.contato a{
+  text-decoration: none;
+  transition: 1s;
+  color: black;
+}
+
+
+.contato a:hover, .contato a:focus{
+  background-color: rgba(0, 0, 255, 0.616);
+  color: white;
+}
+
+.contato {
+  text-align: left;
+  position: relative;
+  width: 260px;
+  margin: auto;
+  float: right;
+  
+    
+}
+
+
+#idade{
+  margin-top: 100px;
+  
+}
+
+
+
+ul li{
+
+  list-style: url(../icons/SVG/check-01.svg);
+}
+
+.listperfil li{
+
+  list-style: url(../icons/SVG/check-02.svg);
+}
