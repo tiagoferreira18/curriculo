@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;600;800&display=swap');
 
+.modo-noturno{
+  background-color: rgb(36, 35, 35);
+  color:rgb(15, 76, 156);
+}
 
 body {
   font-family: 'Gothic A1', sans-serif;
