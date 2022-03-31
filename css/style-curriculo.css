@@ -45,15 +45,10 @@ hr{
 }
 
 /* Todos os H2 */
-h2{
-  text-shadow: blue 0px 0px 2px;
-  
-}
 
 
-/* Nome */
-
-.name {
+/* h1 */
+h1{
   text-align: center;
 }
 
