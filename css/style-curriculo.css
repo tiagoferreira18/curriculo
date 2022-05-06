@@ -56,11 +56,38 @@ h1{
   text-align: center;
 }
 
+/* Contato */
+.contato{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  
+}
+
+.contato img{
+  max-width: 100px;
+  clip-path: circle();
+}
+
+
+.contato #idade{
+  text-align: center;
+  margin-top: 1rem;
+  
+}
+
+
+.contato .dados{
+  display: flex;
+  flex-direction: column;
+}
 /* Links do contato */
 .contato a{
   text-decoration: none;
   transition: 1s;
   color: black;
+
 }
 
 
@@ -69,21 +96,9 @@ h1{
   color: white;
 }
 
-.contato {
-  text-align: left;
-  position: relative;
-  width: 260px;
-  margin: auto;
-  float: right;
-  
-    
-}
 
 
-#idade{
-  margin-top: 100px;
-  
-}
+
 
 
 
