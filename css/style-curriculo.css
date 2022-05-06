@@ -111,3 +111,7 @@ ul li{
 
   list-style: url(../icons/SVG/check-02.svg);
 }
+
+.list-group-item.active{
+  font-weight: bold;
+}
